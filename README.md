@@ -1,4 +1,3 @@
-# streamlit-option-pricing
 # Option Pricing with the Black-Scholes Model
 
 ## Overview
@@ -7,12 +6,14 @@ This project implements the **Black-Scholes model** for European option pricing 
 ## Black-Scholes Model
 The Black-Scholes formula is used to calculate the price of European call and put options. The formula is:
 
+### Call Option Price:
 \[
-C = S N(d_1) - K e^{-rT} N(d_2) \quad \text{(Call Option)}
+C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
 \]
 
+### Put Option Price:
 \[
-P = K e^{-rT} N(-d_2) - S N(-d_1) \quad \text{(Put Option)}
+P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
 \]
 
 Where:
