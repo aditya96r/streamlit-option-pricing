@@ -7,14 +7,14 @@ This project implements the **Black-Scholes model** for European option pricing 
 The Black-Scholes formula is used to calculate the price of European call and put options. The formula is:
 
 ### Call Option Price:
-\[
+$$
 C = S \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)
-\]
+$$
 
 ### Put Option Price:
-\[
+$$
 P = K \cdot e^{-rT} \cdot N(-d_2) - S \cdot N(-d_1)
-\]
+$$
 
 Where:
 - \( S \) = Spot price (current price of the underlying asset)
@@ -25,13 +25,13 @@ Where:
 - \( N(x) \) = Cumulative standard normal distribution function
 - \( d_1 \) and \( d_2 \) are calculated as:
 
-\[
+$$
  d_1 = \frac{\ln(S/K) + (r + 0.5\sigma^2)T}{\sigma\sqrt{T}}
-\]
+$$
 
-\[
+$$
  d_2 = d_1 - \sigma\sqrt{T}
-\]
+$$
 
 ### How Parameters Affect Option Pricing
 - **Spot Price (S)**: Higher spot price increases call option price and decreases put option price.
@@ -49,25 +49,25 @@ Greeks measure the sensitivity of the option price to various factors:
 - **Rho (\( \rho \))**: Measures sensitivity to changes in interest rates.
 
 ### Greek Formulas
-\[
+$$
 \Delta = N(d_1) \quad \text{(for calls)}, \quad N(d_1) - 1 \quad \text{(for puts)}
-\]
+$$
 
-\[
+$$
 \Gamma = \frac{N'(d_1)}{S\sigma\sqrt{T}}
-\]
+$$
 
-\[
+$$
 \nu = S N'(d_1) \sqrt{T}
-\]
+$$
 
-\[
+$$
 \Theta = -\frac{S N'(d_1) \sigma}{2 \sqrt{T}} - rK e^{-rT} N(d_2)
-\]
+$$
 
-\[
+$$
 \rho = K T e^{-rT} N(d_2)
-\]
+$$
 
 ## How to Use This Project
 ### 1. Run the Streamlit App
